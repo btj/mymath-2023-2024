@@ -10,18 +10,6 @@ class MyMathTest {
 	
 	
 	/**
-	 * Geeft het grootste van de drie gegeven getallen terug.
-	 * 
-	 * @post Het resultaat is groeter dan of gelijk aan de gegeven getallen.
-	 *     | result >= x && result >= y && result >= z
-	 * @post Het resultaat is gelijk aan één van de gegeven getallen.
-	 *     | result == x || result == y || result == z
-	 */
-	int max3(int x, int y, int z) {
-		return x > y ? x > z ? x : z : y > z ? y : z;
-	}
-	
-	/**
 	 * Geeft de mediaan van de drie verschillende gegeven getallen terug.
 	 * @pre De argumenten zijn verschillend.
 	 *     | x != y && y != z && x != z
@@ -217,12 +205,12 @@ class MyMathTest {
 	
 	@Test
 	void testMax3() {
-		assertEquals(30, max3(10, 20, 30));
-		assertEquals(30, max3(20, 10, 30));
-		assertEquals(30, max3(10, 30, 20));
-		assertEquals(30, max3(20, 30, 10));
-		assertEquals(30, max3(30, 10, 20));
-		assertEquals(30, max3(30, 20, 10));
+		assertEquals(30, MyMath.max3(10, 20, 30));
+		assertEquals(30, MyMath.max3(20, 10, 30));
+		assertEquals(30, MyMath.max3(10, 30, 20));
+		assertEquals(30, MyMath.max3(20, 30, 10));
+		assertEquals(30, MyMath.max3(30, 10, 20));
+		assertEquals(30, MyMath.max3(30, 20, 10));
 	}
 	
 	// TODO: Schrijf grondige tests voor mediaan, verwissel, find, en sort.

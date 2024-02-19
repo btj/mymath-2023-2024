@@ -19,4 +19,17 @@ public class MyMath {
 		return result;
 	}
 
+	/**
+	 * Geeft het grootste van de drie gegeven getallen terug.
+	 * 
+	 * @post Het resultaat is groeter dan of gelijk aan de gegeven getallen.
+	 *     | result >= x && result >= y && result >= z
+	 * @post Het resultaat is gelijk aan één van de gegeven getallen.
+	 *     | result == x || result == y || result == z
+	 */
+	static int max3(int x, int y, int z) {
+		return x > y ? x > z ? x : z : y > z ? y : z;
+	}
+	
+
 }
